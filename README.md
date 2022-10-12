@@ -1,2 +1,2 @@
-# FlashProject
-FlashProject Udemy course
+# FlaskProject
+FlaskProject Udemy course
