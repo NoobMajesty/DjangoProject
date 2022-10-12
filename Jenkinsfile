@@ -5,6 +5,7 @@ node {
     stage('Clean') {
         sh 'chmod +x "/var/jenkins_home/workspace/NodeJS Pipeline/StopByPort.sh"'
         sh '"/var/jenkins_home/workspace/NodeJS Pipeline/StopByPort.sh" 5000'
+        sh 'echo hi'
     }
     stage('test') {
         def myTestContainer = docker.image('ubuntu-flask')
