@@ -13,7 +13,7 @@ node {
         myTestContainer.run('-it --name flask-App -p 5000:5000 -v /var/jenkins_home/workspace/FlashProject:/var/FlaskProject')
         myTestContainer.inside {
             sh 'export FLASK_APP=/var/FlaskProject/app.py'
-            sh 'flask run -h 0.0.0.0'
+            sh 'flask run -h 0.0.0.0&'
         }
     }
 }
