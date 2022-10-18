@@ -9,7 +9,7 @@ node {
     stage('test') {
         def myTestContainer = docker.image('ubuntu-flask')
         //myTestContainer.pull()
-        myTestContainer.withRun('-it --name flask-App -p 5000:5000 -v /var/jenkins_home/workspace/FlashProject:/var/FlaskProject'){
+        myTestContainer.withRun('-dit --name flask-App -p 5000:5000 -v /var/jenkins_home/workspace/FlashProject:/var/FlaskProject'){
             sh 'export FLASK_APP=/var/FlaskProject/app.py'
             sh 'flask run -h 0.0.0.0&'
         }
